@@ -5,6 +5,8 @@ import br.com.zup.Guardians_Bank.exceptions.LimiteExcedidoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
@@ -46,4 +48,41 @@ public class InfoPagamentoService {
         return infoPagamento;
     }
 
+    public void calculoPagamentoParcelado(InfoPagamento infoPagamento) {
+        //Proposta que está infoPagamento que esta sendo recebeda como parametro
+         infoPagamento.setQtdadeDeParcelas(4);
+         calcularValorDaParcela(infoPagamento);
+         calcularImpostoSobreParcela(infoPagamento);
+         infoPagamento.set
+         infoPagamento.setDataPagamento();
+         //dataPagamento = dataAtual + 30 dias
+        //dataLiberacao = LocalDateTime.now()
+
+        List<InfoPagamento> opcoesPagamento = new ArrayList<>();
+
+
+
+
+         // informar as outras opcoes
+
+
+
+//
+
+
+
+        // valor parcela: calcularValorParcela > valor c/parcela quando informar qtdadeParcela
+        // valor parcela apos imposto: calcularImpostoSobreParcela > valor c/parcela quando informar o valor atual dela
+        //
+
+        //set qtdadeParcelas para póder gerar um objeto infoPagamento
+
+    }
+
+
+// public InfoPagamento salvarOpcaoPagamento(InfoPagamento infopagamento){
+
+    //optional => InfoPagamento opcaoValidada = validarLimiteValorPropuesta(infoPagamento)
+    //
+//}
 }
